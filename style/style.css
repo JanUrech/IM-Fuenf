@@ -1,0 +1,267 @@
+@import "home.css";
+@import "aboutus.css";
+@import "article.css";
+@import "overview.css";
+@import "bubbles.css";
+@import "reset.css";
+
+
+
+/* ================================
+   GLOBALS – Grundlayout der Seite
+   ================================ */
+body {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 300;
+
+    /* Hintergrundbild oben zentriert, darf sich wiederholen falls nötig */
+    /* background-image: url(../media/Backgroundimage.svg);
+    background-repeat: repeat-y;
+    background-size: 100vw auto;
+    background-position: top center; */
+    background-color: whitesmoke;
+
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Inhalt vertikal anordnen */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    /* Verhindert horizontales Scrollen durch Bubbles */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    color: #0A4708;
+    max-width: 100%;
+}
+
+h6 {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    color: #F3C4F7;
+}
+
+/* ================================
+   Header 
+   ================================ */
+header {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.logoBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logoBarText {
+    display: none;
+    min-width: 35%;
+    font-size: 3.5vw;
+    aspect-ratio: 10 / 1;
+    height: auto;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.logoBarText p {
+    font-size: 3.5vw;
+    font-family: "cheee-jimbo", sans-serif;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    color: #656666;
+}
+
+#headerLogo {
+    height: auto;
+    width: 100%;
+    min-width: 30vw;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+#headerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 1rem 0 0;
+    list-style: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.headerMenuItem {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: #0A4708;
+    text-decoration: none;
+}
+
+/* ================================
+   FOOTER – Seitenende
+   ================================ */
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: #0A4708;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #acacac;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#footerMenu {
+    align-items: left;
+    height: max-content;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#footerMenu li {
+    text-align: left;
+}
+
+.footerMenuItem {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    color: #F3C4F7;
+    text-align: left;
+    padding-left: 1rem;
+    text-decoration: none;
+}
+
+#footerLogo {
+    height: auto;
+    width: 75%;
+    max-width: 300px;
+    margin: 15px;
+}
+
+.impressumPage{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 1rem;
+    width: 90%;
+    min-height: 80vh;
+}
+
+.mailadresse{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.impressumText {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+
+/* ================================
+   DOWNLOAD BUTTON – Download-Button Styling
+   ================================ */
+.downloadButton {
+    display: inline-flex;
+    align-items: center;      /* vertikal zentrieren */
+    justify-content: center;  /* horizontal zentrieren (falls nötig) */
+    gap: 0.5rem;
+    padding: 0 1.5rem;        /* oben/unten feste Höhe über 'height' */
+    background: #0A4708;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    height: 50px;             /* fixe Höhe */
+    line-height: 1;           /* verhindert Text-Verschiebung */
+    box-sizing: border-box;
+}
+
+.downloadButton:hover {
+    opacity: 0.9;
+}
+
+/* ================================
+   DESKTOP-ANPASSUNG – Ab 900px
+   ================================ */
+@media (min-width: 900px) {
+
+    .logoBarText {
+        display: flex;
+    }
+
+    .teamMemberList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .topicSection {
+        width: 70vw;
+        max-width: none;
+        margin: 0vh auto 10vh auto;
+    }
+
+    .menuIndex {
+        display: block;
+    }
+
+    #headerMenu {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 4vw;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        max-height: 20vh;
+    }
+}

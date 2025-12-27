@@ -1,0 +1,154 @@
+/* Übersichts-Seite Styling */
+.overviewPage {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 1rem;
+    width: 90%;
+}
+
+.overviewContent {
+    margin: 0;
+}
+   
+
+.overviewContent h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.overviewContent h2 {
+    margin: 3rem 0 1.5rem;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+}
+
+.overviewFeaturedImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.overviewBody {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.overviewBody p {
+    margin-bottom: 1rem;
+}
+
+.overviewBody img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Lead-Paragraph für Overview */
+.overviewLead p {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Artikel-Liste */
+.articleList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.articlePreview {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+}
+
+
+.previewImage {
+    width: 100%;
+    max-height: 300px;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    margin-bottom: 10px;
+}
+
+.previewContent {
+    width: 100%;
+}
+
+.previewContent h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+
+
+.previewDate {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.previewContent p {
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.backLink {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.backLink:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+
+.previewImage {
+    width: 33%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.previewContent {
+    width: 67%;
+    padding: 1.5rem;
+}
+
+.previewContent h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.articlePreview {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Jeder zweite Artikel: Text zuerst, dann Bild */
+.articlePreview:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.articlePreview:nth-child(even) .previewContent{
+padding-left: 0;
+}
+
+
+}

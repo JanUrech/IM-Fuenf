@@ -1,0 +1,235 @@
+/* ================================
+   HOME PAGE STYLING
+   ================================ */
+#indexMain {
+    margin-top: 5vh;
+    min-height: 100vh;
+
+}
+
+/* ================================
+   SECTION – Thematische Container
+   ================================ */
+.topicSection {
+    position: relative;
+    width: 80vw;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 50vw;
+    height: auto;
+}
+
+/* ================================
+   TITEL – Überschrift eines Abschnitts
+   ================================ */
+.topicTitle {
+    font-size: 6vw;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: "cheee-jimbo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+/* ================================
+   HERO ARTICLE – Zentrale Hauptfläche
+   ================================ */
+.heroArticle {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 7 / 4;
+    padding: 2rem;
+
+    background: #0A4708;
+    color: #fff;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.heroArticle p {
+    margin: 0 0 20px 0;
+    color: white;
+}
+
+/* ================================
+   SIDE ARTICLES – Zusätzliche Artikel neben Hero
+   ================================ */
+
+/* Basis-Styling für alle Side Articles (Mobile) */
+.sideArticle {
+    position: absolute;
+    top: 100%;
+
+    /* Mobile: Feste Positionierung */
+    transform: translateY(-20%) rotate(var(--rot, 0deg));
+
+    width: 40%;
+    max-width: 180px;
+    aspect-ratio: 2 / 3;
+
+    background: #F3C4F7;
+    border: solid 4px #000;
+    padding: 1rem;
+    margin: 0;
+
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-start;
+
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Erstes Side Article - links mit 5% Abstand (Mobile) */
+.sideArticle:nth-of-type(1) {
+    left: 5%;
+}
+
+/* Zweites Side Article - rechts mit 5% Abstand (Mobile) */
+.sideArticle:nth-of-type(2) {
+    right: 5%;
+    left: auto;
+}
+
+/* Side Article mit Hintergrundbild */
+.sideArticle.hasImage {
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+}
+
+/* Weißer Overlay für bessere Text-Lesbarkeit auf Bildern */
+.sideArticle.hasImage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+}
+
+/* Text innerhalb Side Articles */
+.sideArticleText {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: left;
+    color: black;
+    position: relative;
+    z-index: 2;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* ================================
+   NAVIGATION – Index-Menü (Desktop)
+   ================================ */
+.menuIndex {
+    display: none;
+    position: fixed;
+    bottom: 20vh;
+    left: 0;
+    width: 25%;
+    z-index: 1000;
+    align-items: flex-start;
+    padding-left: 0;
+}
+
+.menuIndexItem {
+    display: flex;
+    width: max-content;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 0px;
+    color: black;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.menuIndexItem:hover {
+    background-color: #F3C4F7;
+}
+
+.menuIndexItem a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menuIndexItem a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ================================
+   RESPONSIVE – Desktop-Anpassungen (ab 900px)
+   ================================ */
+@media (min-width: 900px) {
+
+    /* Hero Article zentriert mit Padding */
+    .heroArticle {
+        width: 70%;
+        padding: 0 15%;
+        justify-content: center;
+    }
+
+    .sideArticleText {
+        font-size: 1rem;
+    }
+
+    /* Side Articles vertikal zentriert neben Hero (Desktop) */
+    .sideArticle {
+        top: 50%;
+        left: var(--posX, 0%);
+        transform: translate(-50%, calc(-50% + var(--y, 0px))) rotate(var(--rot, 0deg));
+        width: 25%;
+        min-width: 130px;
+        max-width: none;
+        margin: 0;
+    }
+
+    /* Desktop: Erste Side Article links */
+    .sideArticle:nth-of-type(1) {
+        left: 0%;
+    }
+
+    /* Desktop: Zweite Side Article rechts */
+    .sideArticle:nth-of-type(2) {
+        left: 100%;
+        right: auto;
+    }
+
+    .topicTitle {
+        font-size: 3.5;
+
+    }
+}
+
+/* ================================
+   SPITZMARKE – Zusatzinformation
+   ================================ */
+.spitzmarke {
+    font-size: 0.85rem;
+    color: #656666;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+
+}

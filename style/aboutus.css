@@ -1,0 +1,194 @@
+/* ================================
+About us
+   ================================ */
+
+
+#teamPhoto {
+    position: relative;
+    width: 90%;
+    /* Passe die Größe nach Bedarf an */
+    margin-bottom: 30px;
+    height: auto;
+    max-width: 1000px;
+}
+
+#teamPhotoStandard {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.aboutUsIntro {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+    max-width: 1000px;
+    width: 90%;
+}
+
+
+/* ================================
+   INTRO SECTION – Teambild und Text
+   ================================ */
+.aboutUsPage {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 1rem;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutUsPage h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.aboutUsPage h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.aboutUsIntro {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.aboutUsIntro p {
+    margin-bottom: 1rem;
+}
+
+/* ================================
+   TEAM MEMBERS SECTION – Breiter Container
+   ================================ */
+.teamMemberSection {
+    max-width: 1200px;
+    margin: 3rem auto;
+    width: 95%;
+}
+
+.teamMemberSection h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Team Member List bleibt unverändert */
+.teamMemberList {
+    /* Bestehende Styles bleiben erhalten */
+}
+
+/* Teambild als Featured Image formatiert */
+#teamPhoto {
+    padding: 0;
+}
+
+#teamPhotoStandard {
+    /* Wird durch .articleFeaturedImage gestylt */
+}
+
+/* ================================
+  TEAM MEMBERS
+   ================================ */
+.teamMember {
+    position: relative;
+    /* stellt sicher, dass absolute .memberPostit sich darauf bezieht */
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.teamMemberList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 100px;
+}
+
+.memberPostit {
+    position: absolute;
+    top: 70%;
+    left: 0%;
+    width: 45%;
+    /* verlässliche Breitenbasis (anpassbar) */
+    max-width: 180px;
+    /* Obergrenze */
+    box-sizing: border-box;
+    /* Padding/Borders zählen zur Breite */
+    aspect-ratio: 6 / 7;
+    /* gewünschtes Seitenverhältnis */
+    height: auto;
+    /* wichtig: Höhe von aspect-ratio ableiten lassen */
+    background: #F3C4F7;
+    border: none;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.memberName {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    color: black;
+}
+
+.memberRole {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.memberPhotos {
+    position: relative;
+    width: 100%;
+    /* Passe die Größe nach Bedarf an */
+    aspect-ratio: 1/1;
+    /* Quadratisches Verhältnis */
+}
+
+.memberPhotoStandard,
+.memberPhotoFisheye {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.8s;
+    pointer-events: none;
+    /* Verhindert, dass das Bild das Hover blockiert */
+}
+
+.memberPhotoFisheye {
+    opacity: 0;
+    z-index: 2;
+}
+
+.memberPhotos:hover .memberPhotoFisheye,
+.memberPhotos.hover .memberPhotoFisheye {
+    opacity: 1;
+}
+
+.memberPhotos:hover .memberPhotoStandard,
+.memberPhotos.hover .memberPhotoStandard {
+    opacity: 0;
+}
