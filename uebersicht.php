@@ -9,7 +9,7 @@ if (empty($categorySlug)) {
 }
 
 // Hole Category ID
-$catUrl = 'https://wp-lmnop.janicure.ch/wp-json/wp/v2/categories?slug=' . urlencode($categorySlug);
+$catUrl = 'https://wp-im5.janicure.ch/wp-json/wp/v2/categories?slug=' . urlencode($categorySlug);
 $ch = curl_init($catUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_TIMEOUT, 10);
@@ -33,7 +33,7 @@ if (!$category) {
 }
 
 // Hole alle Posts dieser Category
-$postsUrl = 'https://wp-lmnop.janicure.ch/wp-json/wp/v2/posts?categories=' . $categoryId . '&_embed&per_page=100';
+$postsUrl = 'https://wp-im5.janicure.ch/wp-json/wp/v2/posts?categories=' . $categoryId . '&_embed&per_page=100';
 $ch2 = curl_init($postsUrl);
 curl_setopt($ch2, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch2, CURLOPT_TIMEOUT, 10);
@@ -46,7 +46,7 @@ if ($postsResponse) {
 }
 
 // Hole Overview-Category ID
-$overviewCatUrl = 'https://wp-lmnop.janicure.ch/wp-json/wp/v2/categories?slug=overview';
+$overviewCatUrl = 'https://wp-im5.janicure.ch/wp-json/wp/v2/categories?slug=overview';
 $chOv = curl_init($overviewCatUrl);
 curl_setopt($chOv, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($chOv, CURLOPT_TIMEOUT, 5);
