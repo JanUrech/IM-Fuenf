@@ -25,8 +25,8 @@ function getFirstParagraph($content) {
  */
 function getTransformedTopics() {
     // === PARALLELE API-REQUESTS mit curl_multi ===
-    $postsUrl = 'https://wp-lmnop.janicure.ch/wp-json/wp/v2/posts?_embed&per_page=100';
-    $catsUrl = 'https://wp-lmnop.janicure.ch/wp-json/wp/v2/categories?per_page=100';
+    $postsUrl = 'https://wp-im5.janicure.ch/wp-json/wp/v2/posts?_embed&per_page=100';
+    $catsUrl = 'https://wp-im5.janicure.ch/wp-json/wp/v2/categories?per_page=100';
     
     // Multi-Handle erstellen
     $mh = curl_multi_init();

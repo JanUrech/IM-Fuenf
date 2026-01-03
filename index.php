@@ -24,7 +24,7 @@ if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < $cacheTime) {
 }
 
 // Für JSON-LD: Erstelle BreadcrumbList und Organization Schema
-$siteUrl = 'https://lmnop.janicure.ch';
+$siteUrl = 'https://im5.janicure.ch';
 $organizationSchema = [
     '@context' => 'https://schema.org',
     '@type' => 'Organization',
@@ -101,11 +101,11 @@ $collectionPageSchema = [
   <meta name="keywords" content="Journalismus, Multimedial, Magazin, Gesellschaft, Politik, Kultur">
   <meta property="og:title" content="LMNOP Magazin">
   <meta property="og:description" content="LMNOP - Ein multimediales Journalismus Projekt">
-  <meta property="og:url" content="https://lmnop.janicure.ch">
+  <meta property="og:url" content="https://im5.janicure.ch">
   <meta property="og:type" content="website">
   
   <title>LMNOP - Home</title>
-  <link rel="canonical" href="https://lmnop.janicure.ch">
+  <link rel="canonical" href="https://im5.janicure.ch">
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/hbr8dui.css">
   <link rel="icon" type="image/png" href="media/FaviconPrototype.png">

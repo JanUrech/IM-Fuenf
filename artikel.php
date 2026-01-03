@@ -9,7 +9,7 @@ if (empty($slug)) {
 }
 
 // Hole Post-Daten von WP API
-$postUrl = 'https://wp-lmnop.janicure.ch/wp-json/wp/v2/posts?slug=' . urlencode($slug) . '&_embed';
+$postUrl = 'https://wp-im5.janicure.ch/wp-json/wp/v2/posts?slug=' . urlencode($slug) . '&_embed';
 $ch = curl_init($postUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_TIMEOUT, 10);

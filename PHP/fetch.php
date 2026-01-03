@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
-$url = 'https://wp-lmnop.janicure.ch/wp-json/wp/v2/posts';
+$url = 'https://wp-im5.janicure.ch/wp-json/wp/v2/posts';
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
